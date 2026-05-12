@@ -38,7 +38,7 @@
 }
 
 .logo {
-    color: #e8442a;
+    color: #8B1A1A;
     font-weight: bold;
     font-style: italic;
 }
@@ -74,7 +74,7 @@
 
 .input:focus {
     background-color: #1a1a1a !important;
-    border-color: #e8442a !important;
+    border-color: #8B1A1A !important;
     color: #fff !important;
     box-shadow: 0 0 0 0.2rem rgba(232, 68, 42, 0.25) !important;
 }
@@ -99,7 +99,7 @@
 }
 
 .submitBtn {
-    background-color: #e8442a;
+    background-color: #8B1A1A;
     color: #fff;
     font-weight: bold;
     letter-spacing: 1px;
@@ -108,7 +108,7 @@
 }
 
 .submitBtn:hover {
-    background-color: #c73520;
+    background-color: #a81919;
     color: #fff;
 }
 
