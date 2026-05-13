@@ -1,6 +1,6 @@
 .pageWrapper {
     min-height: 100vh;
-    background-image: url('../assets/img.png');
+    background-image: url('../../../assets/img.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,7 +11,6 @@
     position: relative;
 }
  
-/* Same dark overlay technique as Register */
 .pageWrapper::before {
     content: '';
     position: absolute;
@@ -28,7 +27,6 @@
     z-index: 1;
 }
  
-/* ─── Card ─────────────────────────────────────────────────── */
 .card {
     background-color: rgba(20, 20, 20, 0.95);
     border-radius: 25px;
@@ -39,7 +37,6 @@
     opacity: 0.8;
 }
  
-/* ─── Typography ───────────────────────────────────────────── */
 .subtitle {
     color: #888;
     font-size: 13px;
@@ -66,7 +63,6 @@
     color: #fff;
 }
  
-/* ─── Input Fields ─────────────────────────────────────────── */
 .inputGroup span {
     background-color: #1a1a1a;
     border: 1px solid #333;
@@ -97,7 +93,6 @@
     cursor: pointer;
 }
  
-/* ─── Login Button ─────────────────────────────────────────── */
 .submitBtn {
     background-color: #8B1A1A;
     color: #fff;
@@ -112,7 +107,6 @@
     color: #fff;
 }
  
-/* ─── Divider ──────────────────────────────────────────────── */
 .dividerWrapper {
     position: relative;
 }
@@ -141,7 +135,6 @@
     letter-spacing: 2px;
 }
  
-/* ─── Social Buttons ───────────────────────────────────────── */
 .socialBtn {
     background-color: #1a1a1a;
     border: 1px solid #333;
@@ -157,24 +150,3 @@
     background-color: #1a1a1a;
 }
  
-/* ─── Footer ───────────────────────────────────────────────── */
-.footer {
-    border-top: 1px solid #222;
-    padding: 12px 24px;
-}
- 
-.footerBrand {
-    color: #fff;
-    margin-bottom: 2px;
-}
- 
-.footerCopy {
-    color: #dbd0d0;
-    font-size: 12px;
-}
- 
-.footerLink {
-    color: #dbd0d0;
-    font-size: 13px;
-    cursor: pointer;
-}
