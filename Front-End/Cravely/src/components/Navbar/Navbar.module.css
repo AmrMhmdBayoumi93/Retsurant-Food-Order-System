@@ -11,7 +11,7 @@
 }
 
 .logo {
-    color: #8B1A1A;
+    color: var(--primary-color);
     font-weight: bold;
     font-style: italic;
     font-size: 24px;
@@ -73,7 +73,7 @@
 }
 
 .registerBtn {
-    background-color: #8B1A1A;
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     padding: 8px 20px;
@@ -123,8 +123,8 @@
 }
 
 .logoutBtn {
-    background-color: transparent;
-    color: var(--text-secondary);
+    background-color: var(--primary-color);
+    color: var(--text-primary);
     border: 1px solid #444;
     padding: 8px 16px;
     border-radius: 5px;
@@ -134,6 +134,6 @@
 }
 
 .logoutBtn:hover {
-    color: var(--text-primary);
-    border-color: var(--text-primary);
+    background-color: #c73520;
+    color: #fff;
 }
