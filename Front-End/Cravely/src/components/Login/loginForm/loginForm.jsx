@@ -1,8 +1,22 @@
 import React, { useState } from 'react'
 import styles from "./loginForm.module.css"
+import { useAuth } from '../../../context/AuthContext'
+import { useNavigate } from 'react-router-dom'
 
 function Loginform() {
     const [showPassword, setShowPassword] = useState(false)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const { login } = useAuth()
+    const navigate = useNavigate()
+
+    const handleLogin = () => {
+        if (email && password) {
+            login({ name: email.split('@')[0], email })
+            navigate('/')
+        }
+    }
+
     return (
         <div className={styles.card}>
 
@@ -17,7 +31,13 @@ function Loginform() {
                     <span className='input-group-text'>
                         <i className='bi bi-envelope'></i>
                     </span>
-                    <input type='email' placeholder='maiar@gmail.com' className={`form-control ${styles.input}`} />
+                    <input
+                        type='email'
+                        placeholder='maiar@gmail.com'
+                        className={`form-control ${styles.input}`}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
                 </div>
             </div>
 
@@ -30,14 +50,20 @@ function Loginform() {
                     <span className='input-group-text'>
                         <i className='bi bi-lock'></i>
                     </span>
-                    <input type={showPassword ? 'text' : 'password'} placeholder='••••••••' className={`form-control ${styles.input}`} />
+                    <input
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder='••••••••'
+                        className={`form-control ${styles.input}`}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                     <span className={`input-group-text ${styles.eyeBtn}`} onClick={() => setShowPassword(!showPassword)}>
                         <i className={`bi ${showPassword ? 'bi-eye-slash' : 'bi-eye'}`}></i>
                     </span>
                 </div>
             </div>
 
-            <button className={`btn w-100 ${styles.submitBtn}`}>
+            <button className={`btn w-100 ${styles.submitBtn}`} onClick={handleLogin}>
                 Login <i className='bi bi-arrow-right'></i>
             </button>
 

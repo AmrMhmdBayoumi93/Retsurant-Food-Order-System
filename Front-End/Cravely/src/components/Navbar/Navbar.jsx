@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import { useCart } from '../../context/CartContext'
 import { useWishlist } from '../../context/WishlistContext'
+import { useAuth } from '../../context/AuthContext'
 
 export default function Navbar() {
     const { cartCount } = useCart()
     const { wishlistCount } = useWishlist()
+    const { user, isLoggedIn, logout } = useAuth()
 
     return (
         <nav className={styles.navbar}>
@@ -38,9 +40,24 @@ export default function Navbar() {
                         )}
                     </div>
                 </Link>
-                <Link to="/login" className={styles.loginBtn}>Login</Link>
-                <Link to="/register" className={styles.loginBtn}>Register</Link>
-                <Link to="/menu" className={styles.registerBtn}>Order Now</Link>
+
+                {isLoggedIn ? (
+                    <>
+                        <div className={styles.userInfo}>
+                            <i className="bi bi-person-circle"></i>
+                            <span className={styles.userName}>{user.name}</span>
+                        </div>
+                        <button className={styles.logoutBtn} onClick={logout}>
+                            Logout
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <Link to="/login" className={styles.loginBtn}>Login</Link>
+                        <Link to="/register" className={styles.loginBtn}>Register</Link>
+                        <Link to="/menu" className={styles.registerBtn}>Order Now</Link>
+                    </>
+                )}
             </div>
 
         </nav>
