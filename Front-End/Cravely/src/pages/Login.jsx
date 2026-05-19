@@ -1,18 +1,16 @@
-import React from 'react'
-import RegisterForm from '../components/Register/RegisterForm'
 import Footer from '../components/Login/Footer/Footer'
-import styles from './Register.module.css'
+import Loginform from '../components/Login/loginForm/Loginform'
+import styles from './Login.module.css'
 
-export default function Register() {
+function Login() {
     return (
         <div className={styles.pageWrapper}>
-
             <div className='d-flex justify-content-center align-items-center flex-grow-1'>
-                <RegisterForm />
+                <Loginform/>
             </div>
-
-            <Footer />
-
+            <Footer/>
         </div>
     )
 }
+
+export default Login

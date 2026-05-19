@@ -1,0 +1,127 @@
+.section {
+    background-color: var(--bg-color);
+    padding: 60px var(--section-padding);
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sectionTitle {
+    color: var(--text-primary);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sectionSubtitle {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.seeAll {
+    color: var(--primary-color);
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.seeAll:hover {
+    text-decoration: underline;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cardImg {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.cardBody {
+    padding: 15px 15px 50px 15px;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.cardTitle {
+    color: var(--text-primary);
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cardPrice {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cardDesc {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.cardActions {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.wishlistBtn {
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+    border: 1px solid #333;
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.wishlistBtn:hover {
+    color: var(--primary-color);
+}
+
+.addBtn {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.addBtn:hover {
+    background-color: var(--primary-hover);
+}
