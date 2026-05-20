@@ -1,0 +1,139 @@
+.navbar {
+    background-color: #000000;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLink {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navLink:hover {
+    color: #fff;
+}
+
+.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    color: #aaa;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.icon:hover {
+    color: #fff;
+}
+
+.loginBtn {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.loginBtn:hover {
+    color: #fff;
+}
+
+.registerBtn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.registerBtn:hover {
+    background-color: #c73520;
+    color: #fff;
+}
+.iconWrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.userName {
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.logoutBtn {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: 1px solid #444;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.logoutBtn:hover {
+    background-color: #c73520;
+    color: #fff;
+}
