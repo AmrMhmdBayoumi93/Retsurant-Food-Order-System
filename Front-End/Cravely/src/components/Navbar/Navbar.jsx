@@ -1,14 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import { useCart } from '../../context/CartContext'
 import { useWishlist } from '../../context/WishlistContext'
 import { useAuth } from '../../context/AuthContext'
-
+     
+ 
 export default function Navbar() {
+
     const { cartCount } = useCart()
     const { wishlistCount } = useWishlist()
-    const { user, isLoggedIn, logout } = useAuth()
+    const { user, isLoggedIn, logout,activePage,setActivePage } = useAuth()
 
     return (
         <nav className={styles.navbar}>
@@ -18,11 +20,19 @@ export default function Navbar() {
 
             {/* Nav Links */}
             <ul className={styles.navLinks}>
-                <li><Link to="/" className={`${styles.navLink} ${styles.active}`}>Home</Link></li>
-                <li><Link to="/menu" className={styles.navLink}>Menu</Link></li>
+                <li><Link onClick={() => {
+                    setActivePage("home")
+                    console.log(activePage)
+                }} to ="/" className={`${activePage === "home"? styles.navLink:styles.navLink2} ${styles.active}`}>Home</Link></li>
+                <li><Link onClick={() => {
+                    setActivePage("menu")
+                    console.log(activePage)
+                }} to ="/menu"  className={`${activePage === "meun"? styles.navLink:styles.navLink2} ${styles.active}`}>Menu</Link></li>
+
+
             </ul>
 
-            {/* Icons & Buttons */}
+            {/* Icons & Buttons */} 
             <div className={styles.navIcons}>
                 <Link to="/wishlist" className={styles.icon}>
                     <div className={styles.iconWrapper}>

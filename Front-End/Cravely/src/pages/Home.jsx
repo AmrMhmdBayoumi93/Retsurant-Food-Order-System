@@ -6,6 +6,7 @@ import CraveStories from '../components/CraveStories/CraveStories'
 import HomeFooter from '../components/HomeFooter/HomeFooter'
 import styles from './Home.module.css'
 
+
 export default function Home() {
     return (
         <div className={styles.pageWrapper}>
