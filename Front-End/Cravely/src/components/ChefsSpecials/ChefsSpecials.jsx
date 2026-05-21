@@ -5,28 +5,38 @@ import img2 from '../../assets/tome.png'
 import img3 from '../../assets/gato.png'
 import { useCart } from '../../context/CartContext'
 import { useWishlist } from '../../context/WishlistContext'
+import { Tag } from 'lucide-react'
 
 const items = [
     {
         id: 1,
         title: 'Truffle Umami Risotto',
-        price: '$62',
+        name: 'Truffle Umami Risotto',
+        price: 62,
         desc: 'Aged carnaroli rice infused with rich forest truffles, finished with 24-month Parmigiano and gold leaf.',
-        img: img1
+        tags: [],
+        img: img1,
+        image: img1
     },
     {
         id: 2,
         title: 'Burgundy Crust Lamb',
-        price: '$48',
+        name: 'Burgundy Crust Lamb',
+        price: 48,
         desc: 'Frenched rack of lamb with a reduction of vintage burgundy and hazelnut nut tapenade.',
-        img: img2
+        tags: [],
+        img: img2,
+        image: img2
     },
     {
         id: 3,
         title: 'Miso Glazed Sea Bass',
-        price: '$58',
+        name: 'Miso Glazed Sea Bass',
+        price: 58,
         desc: 'Miso-aged sea bass has marinated in sweet miso, steamed to perfection and served over black iris foam.',
-        img: img3
+        tags: [],
+        img: img3,
+        image: img3
     }
 ]
 

@@ -6,7 +6,7 @@ import { useWishlist } from '../../context/WishlistContext'
 import { useAuth } from '../../context/AuthContext'
 
 export default function Navbar() {
-    const { cartCount } = useCart()
+    const { totalItems: cartCount } = useCart()
     const { wishlistCount } = useWishlist()
     const { user, isLoggedIn, logout } = useAuth()
 

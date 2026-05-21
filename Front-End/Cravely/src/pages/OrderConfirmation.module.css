@@ -1,0 +1,80 @@
+.pageWrapper {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px var(--section-padding);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.icon {
+    font-size: 60px;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: var(--text-primary);
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.orderNumber {
+    background-color: #0d0d0d;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.orderNumberText {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.orderNumberValue {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.homeBtn {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.homeBtn:hover {
+    background-color: var(--primary-hover);
+    color: var(--text-primary);
+}
