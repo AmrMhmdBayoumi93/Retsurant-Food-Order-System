@@ -1,5 +1,11 @@
 
-    import React from 'react'
+    
+    
+    import React, { useEffect } from 'react'
+    import { useState } from 'react'
+  
+   import axois from 'axios'
+
 
     import styles from '../MenuHeroSection/MenuHeroSection.module.css'
       import MenuCard from '../MenuCard/MenuCard'
@@ -9,14 +15,20 @@
       
       function MenuHeroSection() {
       
-      const cards = [
-        {title:"burger1" , price:10 , description:"this is good meal1"},
-        {title:"burger" , price:15 , description:"this is good meal"},
-        {title:"burger" , price:15 , description:"this is good meal"},
-        {title:"burger" , price:15 , description:"this is good meal"},
-        {title:"burger" , price:15 , description:"this is good meal"},
-        {title:"burger" , price:15 , description:"this is good meal"},
-      ]
+      const [cards , setCards] = useState([]);
+
+      const getData = async ()=>{
+        const res = await axois.get('https://dummyjson.com/products');
+        const products = res.data.products;
+    //    console.log(products);
+        setCards(products);
+      }
+
+
+
+      useEffect(()=>{
+        getData();
+      },[])
 
 
       return (
@@ -70,7 +82,7 @@
 
         {cards.map((card,index)=>(
           <div className='col-4 mb-5' key={index}>
-            <MenuCard title={card.title} price={card.price} description ={card.description}  /> 
+            <MenuCard title={card.brand} price={card.price} description ={card.description} image={card.images}  /> 
           </div>
         ))}
         </div>
