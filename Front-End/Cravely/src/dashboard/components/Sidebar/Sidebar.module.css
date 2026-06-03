@@ -1,0 +1,60 @@
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin-bottom: 10px;
+}
+
+.brandInfo {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brandInfo h4 {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.brandInfo p {
+  margin: 5px 0 0 0;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  background: #3b82f6;
+  color: white;
+}
