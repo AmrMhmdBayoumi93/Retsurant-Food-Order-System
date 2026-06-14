@@ -1,0 +1,151 @@
+.pageWrapper {
+    background-image: url('../../../assets/img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+ 
+.pageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+ 
+.pageWrapper > * {
+    position: relative;
+    z-index: 1;
+}
+ 
+.card {
+    background-color: rgba(20, 20, 20, 0.95);
+    border-radius: 25px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    color: #fff;
+    opacity: 0.8;
+}
+ 
+.subtitle {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+ 
+.label {
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    display: block;
+}
+ 
+.forgotLink {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+ 
+.forgotLink:hover {
+    color: #fff;
+}
+ 
+.inputGroup span {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #aaa;
+}
+ 
+.input {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+    color: #fff !important;
+}
+ 
+.input::placeholder {
+    color: #555;
+}
+ 
+.input:focus {
+    background-color: #1a1a1a !important;
+    border-color: #8B1A1A !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 0.2rem rgba(232, 68, 42, 0.25) !important;
+}
+ 
+.eyeBtn {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #aaa;
+    cursor: pointer;
+}
+ 
+.submitBtn {
+    background-color: #8B1A1A;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 12px;
+    border: none;
+}
+ 
+.submitBtn:hover {
+    background-color: #a81919;
+    color: #fff;
+}
+ 
+.dividerWrapper {
+    position: relative;
+}
+ 
+.dividerWrapper::before,
+.dividerWrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background-color: #333;
+}
+ 
+.dividerWrapper::before {
+    left: 0;
+}
+ 
+.dividerWrapper::after {
+    right: 0;
+}
+ 
+.dividerText {
+    color: #555;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+ 
+.socialBtn {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #ccc;
+    font-size: 14px;
+    padding: 10px;
+    transition: border-color 0.2s, color 0.2s;
+}
+ 
+.socialBtn:hover {
+    border-color: #555;
+    color: #fff;
+    background-color: #1a1a1a;
+}
+ 

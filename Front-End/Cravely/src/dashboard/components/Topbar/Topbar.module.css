@@ -1,0 +1,43 @@
+.topbar {
+  height: 60px;
+  background: #ffffff; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.search {
+  width: 300px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 18px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.userIcon {
+  font-size: 18px;
+  color: #374151;
+}
